@@ -4,7 +4,7 @@
   <artifactId>craetewar</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>craetewar</name>
+  <name>maven_project</name>
   
    <parent>
         <groupId>org.springframework.boot</groupId>
@@ -25,6 +25,25 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.1</version>
         </plugin>
+	 <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-antrun-plugin</artifactId>
+            <version>1.1</version>
+            <executions>
+               <execution>
+                  <id>id.clean</id>
+                  <phase>clean</phase>
+                  <goals>
+                     <goal>run</goal>
+                  </goals>
+                  <configuration>
+                     <tasks>
+                        <echo>clean phase</echo>
+                     </tasks>
+                  </configuration>
+               </execution>     
+            </executions>
+         </plugin>
     </plugins>  
    </build>  
   
